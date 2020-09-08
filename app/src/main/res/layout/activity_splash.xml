@@ -4,8 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bc_splash"
     tools:context=".activities.SplashActivity">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 
     <TextView
@@ -16,6 +24,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:fontFamily="@font/roboto_bold"
         android:layout_marginBottom="@dimen/space_default"
+        android:textColor="#636363"
         app:layout_constraintStart_toStartOf="parent"/>
 
 
