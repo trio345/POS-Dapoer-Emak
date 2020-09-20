@@ -2,22 +2,37 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginEnd="@dimen/space_default">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_above="@+id/tvPrice"
+            tools:text="Spagetti Boolonice + Nasi"
+            android:textSize="15dp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            tools:text="Rp. 23.000"
+            android:layout_alignBottom="@+id/ivPromo"
+            android:textSize="12sp"/>
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPromo"
             android:layout_width="250dp"
             android:layout_height="150dp"
-            tools:srcCompat="@tools:sample/avatars"
+            android:elevation="20dp"
             android:scaleType="fitXY"
             />
 
-
-
-    </LinearLayout>
-
-
+    </RelativeLayout>
 
 </layout>

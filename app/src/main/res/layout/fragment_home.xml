@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_default"
+        android:layout_marginEnd="@dimen/space_default"
+        >
+        <TextView
+            android:id="@+id/tvPromo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Promo Specials"
+            android:fontFamily="@font/roboto_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="15sp"/>
+
+        <include
+            android:id="@+id/seeDetailsPromo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout="@layout/see_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="30dp"
+
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPromo"
+            android:layout_marginTop="@dimen/space_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/tvPromo"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:listitem="@layout/list_promo"/>
+
+        <TextView
+            android:id="@+id/tvProduct"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="All Products"
+            app:layout_constraintTop_toBottomOf="@+id/rvPromo"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/roboto_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="15sp"/>
+
+        <include
+            android:id="@+id/seeDetailsProduct"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout="@layout/see_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvPromo"
+            android:layout_marginTop="30dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</FrameLayout>
